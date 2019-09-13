@@ -1,0 +1,18 @@
+$colors: (
+    primary-blue: #18acc3,
+    secondary-blue: #007A8D,
+    primary-yellow:#FDCB13,
+    secondary-yellow:#DE9E1F,
+    green:#0FA866,
+    font-color:#1F2D30,
+    bg-color:#FBFBFB,
+    modal-overlay:rgba(31, 45, 48, 0.884)
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name);
+}
+
+body {
+    background-color: color(bg-color);    
+}
