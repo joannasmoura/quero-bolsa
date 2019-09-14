@@ -13,6 +13,22 @@ body {
   text-align: right;
 }
 
+.f-700 {
+  font-weight: 700;
+}
+
+.f-600 {
+  font-weight: 600;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
 #content {
   padding-top: 70px;
   min-height: "calc(100vh - 92px)";
@@ -56,7 +72,7 @@ header span {
   font-size: 1.5em;
 }
 
-.breadcrumbs {
+.menu {
   background-color: #18acc3;
   color: white;
   height: 40px;
@@ -69,7 +85,7 @@ header span {
   margin-top: 0px;
 }
 
-.breadcrumbs div {
+.menu div {
   margin: 9px 18px;
   font-size: 15px;
   font-weight: 600;

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&display=swap");
+body {
+  background-color: #FBFBFB;
+  font-family: 'Open Sans';
+  margin: 5px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.f-700 {
+  font-weight: 700;
+}
+
+.f-600 {
+  font-weight: 600;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+#content {
+  padding-top: 70px;
+  min-height: "calc(100vh - 92px)";
+}
+
+div#breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #007A8D;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+#icon {
+  margin-right: 7px;
+}
+/*# sourceMappingURL=Breadcrumbs.css.map */
