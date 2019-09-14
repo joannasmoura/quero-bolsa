@@ -33,4 +33,81 @@ body {
   padding-top: 70px;
   min-height: "calc(100vh - 92px)";
 }
+
+button {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #007A8D;
+  font-family: 'Open Sans';
+  color: #007A8D;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 13px 0 13px 0;
+  padding: 15px;
+}
+
+button:focus {
+  background-color: #007A8D;
+  color: white;
+  outline: 0;
+}
+
+.disabled {
+  border: 1px solid rgba(0, 122, 141, 0.6);
+  color: rgba(0, 122, 141, 0.6);
+  pointer-events: none;
+}
+
+div#main {
+  margin: 20px;
+  color: #1F2D30;
+}
+
+div#main section#texto-principal p {
+  font-size: 15px;
+}
+
+div#main section#semestres {
+  border-radius: 5px;
+}
+
+button-group {
+  display: -ms-grid;
+  display: grid;
+  border: 1px solid #007A8D;
+  border-radius: 5px;
+}
+
+button-group button {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #007A8D;
+  border-radius: 0;
+}
+
+button-group .disabled {
+  border: 0 rgba(0, 122, 141, 0.6);
+}
+
+div#card {
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(26, 1, 1, 0.178);
+          box-shadow: 0px 2px 5px 1px rgba(26, 1, 1, 0.178);
+  margin: 20px 0 0 0;
+  color: #1F2D30;
+  padding: 20px;
+}
+
+div#card div#texto {
+  margin: 15px;
+  font-size: 13px;
+}
+
+div#card div#texto h4 {
+  font-weight: 200;
+  margin: 0 30px 0 30px;
+}
+
+.icon-color {
+  color: #18acc3;
+}
 /*# sourceMappingURL=Main.css.map */

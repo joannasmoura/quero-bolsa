@@ -6,9 +6,10 @@ $colors: (
     primary-yellow:#FDCB13,
     secondary-yellow:#DE9E1F,
     quero-green:#0FA866,
-    font-color:#1F2D30,
+    font:#1F2D30,
     bg-color:#FBFBFB,
-    modal-overlay:rgba(31, 45, 48, 0.884)
+    modal-overlay:rgba(31, 45, 48, 0.884),
+    primary-disabled:rgba(0, 122, 141, 0.60)
 );
 
 @function color($color-name){
@@ -31,4 +32,28 @@ body {
 #content {
     padding-top: 70px;
     min-height: "calc(100vh - 92px)";
+}
+
+button{
+    background-color: white;
+    border-radius:5px;
+    border: 1px solid color(secondary-blue);
+    font-family:'Open Sans';
+    color:color(secondary-blue);
+    font-size:16px;
+    font-weight: 600;
+    margin: 13px 0 13px 0;
+    padding:15px;
+}
+
+button:focus{
+    background-color: color(secondary-blue);
+    color:white;
+    outline: 0;
+}
+
+.disabled{
+    border: 1px solid color(primary-disabled);
+    color:color(primary-disabled);
+    pointer-events: none;
 }

@@ -34,6 +34,30 @@ body {
   min-height: "calc(100vh - 92px)";
 }
 
+button {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #007A8D;
+  font-family: 'Open Sans';
+  color: #007A8D;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 13px 0 13px 0;
+  padding: 15px;
+}
+
+button:focus {
+  background-color: #007A8D;
+  color: white;
+  outline: 0;
+}
+
+.disabled {
+  border: 1px solid rgba(0, 122, 141, 0.6);
+  color: rgba(0, 122, 141, 0.6);
+  pointer-events: none;
+}
+
 footer {
   background-color: #18acc3;
   color: white;
