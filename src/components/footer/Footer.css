@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&display=swap");
+body {
+  background-color: #FBFBFB;
+  font-family: 'Open Sans';
+  margin: 5px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.f-700 {
+  font-weight: 700;
+}
+
+.f-600 {
+  font-weight: 600;
+}
+
+#content {
+  padding-top: 70px;
+  min-height: "calc(100vh - 92px)";
+}
+
+footer {
+  background-color: #18acc3;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  font-size: 15px;
+      grid-template-areas: "contato contato contato" "chat email ajuda"	 "amor amor amor";
+}
+
+footer div {
+  background-color: #007A8D;
+}
+
+footer div#contato {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "icon info";
+  -ms-grid-columns: 0.5fr 2fr;
+      grid-template-columns: 0.5fr 2fr;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contato;
+}
+
+footer div#contato div#icon {
+  margin: 20px 0 0 48px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: icon;
+}
+
+footer div#contato div#info {
+  margin: 15px 0 15px 15px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: info;
+}
+
+footer div#chat {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: chat;
+  margin: 3px 3px 0 0;
+}
+
+footer div#email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: email;
+  margin-top: 3px;
+}
+
+footer div#ajuda {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: ajuda;
+  margin: 3px 0 0 3px;
+}
+
+footer div#amor {
+  background-color: #18acc3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: amor;
+  margin: 10px 0 10px 0;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.icon {
+  margin-top: 15px;
+}
+/*# sourceMappingURL=Footer.css.map */

@@ -25,7 +25,7 @@ function Header() {
             </header>
             <div className="breadcrumbs">
                 <div>Minha conta</div>
-                <div className="right">Menu <FontAwesomeIcon icon={faChevronDown} iconSize="xs"/></div>  
+                <div className="right">Menu <FontAwesomeIcon icon={faChevronDown}/></div>  
             </div>
         </span>        
     );

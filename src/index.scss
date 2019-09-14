@@ -23,3 +23,12 @@ body {
 
 .center{text-align: center;}
 .right{text-align: right}
+.f-700{font-weight:700;}
+.f-600{font-weight:600;}
+.mb-10{margin-bottom: 10px;}
+.mb-5{margin-bottom: 5px;}
+
+#content {
+    padding-top: 70px;
+    min-height: "calc(100vh - 92px)";
+}

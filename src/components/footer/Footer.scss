@@ -1,0 +1,61 @@
+@import '../../index';
+
+footer{
+    background-color: color(primary-blue);   
+    color:white;
+    display:grid;
+    font-size: 15px;    
+    grid-template-areas:
+		"contato contato contato"
+        "chat email ajuda"	
+        "amor amor amor"	
+        ;        
+    div{
+        background-color: color(secondary-blue);
+    }
+    div#contato{
+        display:grid;       
+        grid-template-areas:"icon info";         
+        grid-template-columns: 0.5fr 2fr;
+    
+        div#icon{
+            margin: 20px 0 0 48px;
+            grid-area: icon;
+        }
+
+        div#info{
+            margin: 15px 0 15px 15px;                
+            grid-area: info;       
+        }
+        grid-area: contato;
+    }
+    div#chat{
+        grid-area: chat;
+        margin: 3px 3px 0 0;
+
+    }
+    div#email{
+        grid-area: email;
+        margin-top: 3px;
+    }
+    div#ajuda{
+        grid-area: ajuda;
+        margin: 3px 0 0 3px;
+    }   
+
+    div#amor{
+        background-color: color(primary-blue);
+        grid-area: amor;
+        margin: 10px 0 10px 0;
+    }
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-5{
+    margin-bottom: 5px;
+}
+.icon{
+    margin-top:15px;
+}

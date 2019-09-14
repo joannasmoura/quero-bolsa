@@ -13,6 +13,11 @@ body {
   text-align: right;
 }
 
+#content {
+  padding-top: 70px;
+  min-height: "calc(100vh - 92px)";
+}
+
 header {
   height: 60px;
   background-color: white;
