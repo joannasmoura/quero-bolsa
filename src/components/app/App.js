@@ -1,14 +1,10 @@
 import React from 'react';
-import logo from '../../assets/images/logo-querobolsa.svg';
 import './App.css';
+import Header from '../header/Header.js'
 
 function App() {
   return (
-    <div>
-      <header>
-        <img src={logo} className="App-logo" alt="logo" />             
-      </header>
-    </div>
+    <Header/>
   );
 }
 

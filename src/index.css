@@ -1,4 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&display=swap");
 body {
   background-color: #FBFBFB;
+  font-family: 'Open Sans';
+  margin: 5px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
 }
 /*# sourceMappingURL=index.css.map */
