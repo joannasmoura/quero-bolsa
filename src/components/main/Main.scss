@@ -43,10 +43,67 @@ div#card{
             font-weight: 200;
             margin:0 30px 0 30px;
         }        
-    }    
+    }   
+    
 }
 
 .icon-color{
     color: color(primary-blue);
 }
 
+div.escolhido{
+    h3{
+        color:color(secondary-blue);
+        margin:0;
+    } 
+    div.first{
+        margin-top: 15px;
+        p{
+            font-weight:bold;
+        }
+        label{
+            font-size:15px;
+        }
+    }
+    div.third{
+        p{
+            margin-bottom:0;            
+        }
+        p.through-line{
+            text-decoration: line-through;
+        }
+        h3{
+            margin-top:0;
+            font-weight: normal;
+            green-accent{
+                font-size: 23px;
+            }            
+        }
+        label{
+            text-transform: none;    
+            font-size:15px;        
+        }
+    }
+    div.fourth{
+        display:grid;
+        grid-template-areas: "excluir oferta";
+        grid-template-columns: 1.5fr 2fr;
+    }
+    button.oferta{
+        background-color: color(primary-yellow);
+        color: black;
+        border-color: color(secondary-yellow);
+        grid-area:oferta;
+        margin-left:10px;
+    }
+    button.excluir{
+        grid-area:excluir;
+        margin-right:10px;
+    }
+    button.indisponivel{
+        grid-area:oferta;
+        border-color: grey;
+        background-color: darkgrey;
+        color: gray;
+    }
+}

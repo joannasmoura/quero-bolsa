@@ -58,6 +58,135 @@ button:focus {
   pointer-events: none;
 }
 
+.check-custom {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  outline: 0;
+}
+
+.check-custom:checked {
+  background-color: #18acc3;
+  border: 1px solid #18acc3;
+}
+
+.check-custom:checked:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: white;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 12.5em;
+  height: 5.25em;
+  font: 1em/1 arial, sans-serif;
+}
+
+[type='range'] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  padding: 0;
+  min-height: 1.5em;
+  background: transparent;
+  font: inherit;
+}
+
+[type='range'], [type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+[type='range']::-webkit-slider-runnable-track {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  width: 12.5em;
+  height: 0.25em;
+  background: #18acc3;
+}
+
+[type='range']::-moz-range-track {
+  box-sizing: border-box;
+  border: none;
+  width: 12.5em;
+  height: 0.25em;
+  background: #18acc3;
+}
+
+[type='range']::-ms-track {
+  box-sizing: border-box;
+  border: none;
+  width: 12.5em;
+  height: 0.25em;
+  background: #18acc3;
+}
+
+[type='range']::-webkit-slider-thumb {
+  margin-top: -0.625em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: #18acc3 2px solid;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: white;
+}
+
+[type='range']::-moz-range-thumb {
+  box-sizing: border-box;
+  border: #18acc3 2px solid;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: white;
+}
+
+[type='range']::-ms-thumb {
+  margin-top: 0;
+  box-sizing: border-box;
+  border: #18acc3 2px solid;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: white;
+}
+
+[type='range']::-ms-tooltip {
+  display: none;
+}
+
+[type='range'] ~ output {
+  display: none;
+}
+
+.js [type='range'] ~ output {
+  display: block;
+  position: absolute;
+  left: 0.75em;
+  top: 0;
+  padding: .25em .5em;
+  border-radius: 3px;
+  -webkit-transform: translate(calc((var(--val) - var(--min))/(var(--max) - var(--min))*11em - 50%));
+          transform: translate(calc((var(--val) - var(--min))/(var(--max) - var(--min))*11em - 50%));
+  background: #95a;
+  color: #eee;
+}
+
 footer {
   background-color: #18acc3;
   color: white;
