@@ -5,6 +5,11 @@ body {
   margin: 5px 0;
 }
 
+green-accent {
+  color: #0FA866;
+  font-weight: bold;
+}
+
 .center {
   text-align: center;
 }
@@ -52,12 +57,7 @@ button:focus {
   outline: 0;
 }
 
-.disabled {
-  border: 1px solid rgba(0, 122, 141, 0.6);
-  color: rgba(0, 122, 141, 0.6);
-  pointer-events: none;
-}
-
+/*----Checkbox-----*/
 .check-custom {
   -webkit-appearance: none;
   background-color: #ffffff;
@@ -187,6 +187,18 @@ button:focus {
   color: #eee;
 }
 
+.disabled {
+  border-color: grey;
+  background-color: darkgrey;
+  color: gray;
+}
+
+.enabled {
+  background-color: #FDCB13;
+  color: black;
+  border-color: #DE9E1F;
+}
+
 footer {
   background-color: #18acc3;
   color: white;
@@ -247,7 +259,7 @@ footer div#ajuda {
   margin: 3px 0 0 3px;
 }
 
-footer div#amor {
+footer div#dedicatoria {
   background-color: #18acc3;
   -ms-grid-row: 3;
   -ms-grid-column: 1;

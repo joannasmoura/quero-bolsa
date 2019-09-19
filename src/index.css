@@ -57,12 +57,7 @@ button:focus {
   outline: 0;
 }
 
-.disabled {
-  border: 1px solid rgba(0, 122, 141, 0.6);
-  color: rgba(0, 122, 141, 0.6);
-  pointer-events: none;
-}
-
+/*----Checkbox-----*/
 .check-custom {
   -webkit-appearance: none;
   background-color: #ffffff;
@@ -190,5 +185,17 @@ button:focus {
           transform: translate(calc((var(--val) - var(--min))/(var(--max) - var(--min))*11em - 50%));
   background: #95a;
   color: #eee;
+}
+
+.disabled {
+  border-color: grey;
+  background-color: darkgrey;
+  color: gray;
+}
+
+.enabled {
+  background-color: #FDCB13;
+  color: black;
+  border-color: #DE9E1F;
 }
 /*# sourceMappingURL=index.css.map */

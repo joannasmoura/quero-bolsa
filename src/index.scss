@@ -20,8 +20,6 @@ $thumb-d: 1.5em;
 $track-c: color(primary-blue);
 $dist: $track-w - $thumb-d;
 
-
-
 body {
     background-color: color(bg-color);
     font-family:'Open Sans';
@@ -63,11 +61,7 @@ button:focus{
     outline: 0;
 }
 
-.disabled{
-    border: 1px solid color(primary-disabled);
-    color:color(primary-disabled);
-    pointer-events: none;
-}
+/*----Checkbox-----*/
 
 .check-custom{
     -webkit-appearance: none;
@@ -160,4 +154,16 @@ button:focus{
             color: #eee;
         }
     }
+}
+
+.disabled{
+    border-color: grey;
+    background-color: darkgrey;
+    color: gray;
+}
+
+.enabled{
+    background-color: color(primary-yellow);
+    color: black;
+    border-color: color(secondary-yellow);
 }

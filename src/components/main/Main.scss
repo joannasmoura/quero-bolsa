@@ -56,7 +56,7 @@ div.escolhido{
         color:color(secondary-blue);
         margin:0;
     } 
-    div.first{
+    div.combo-name{
         margin-top: 15px;
         p{
             font-weight:bold;
@@ -65,7 +65,7 @@ div.escolhido{
             font-size:15px;
         }
     }
-    div.third{
+    div.preco{
         p{
             margin-bottom:0;            
         }
@@ -77,22 +77,19 @@ div.escolhido{
             font-weight: normal;
             green-accent{
                 font-size: 23px;
-            }            
+            }
         }
         label{
             text-transform: none;    
             font-size:15px;        
         }
     }
-    div.fourth{
+    div.acao-escolhidos{
         display:grid;
         grid-template-areas: "excluir oferta";
         grid-template-columns: 1.5fr 2fr;
     }
-    button.oferta{
-        background-color: color(primary-yellow);
-        color: black;
-        border-color: color(secondary-yellow);
+    button.oferta{        
         grid-area:oferta;
         margin-left:10px;
     }
@@ -101,9 +98,6 @@ div.escolhido{
         margin-right:10px;
     }
     button.indisponivel{
-        grid-area:oferta;
-        border-color: grey;
-        background-color: darkgrey;
-        color: gray;
+        grid-area:oferta;        
     }
 }

@@ -118,11 +118,28 @@ class Main extends React.Component {
             escolhidos:this.state.escolhidos
         }
     }
+
+    adicionaEscolhidos = (escolhidos) =>{
+        let state = this.state;
+        state.escolhidos = escolhidos;
+        this.setState(state);
+    }
+
+    removeEscolhidos = (remover) =>{                         
+        let state = this.state;
+        state.escolhidos.map((v, i ) => {
+            if(v.full_price === remover.full_price){
+                state.escolhidos.splice(i, 1)                
+            }
+            return true
+        })
+        this.setState(state);
+    }
     
     render() {
         return(
             <div id="main">
-                <Modal handleClose={() =>this.closeModal()} getData={(x) =>this.getData(x)} modal={this.state.openModal} campos={this.camposModal()}/>  
+                <Modal handleClose={() =>this.closeModal()} adicionaEscolhidos={(x) =>this.adicionaEscolhidos(x)} getData={(x) =>this.getData(x)} modal={this.state.openModal} campos={this.camposModal()}/>  
                 <Breadcrumbs/>
                 <section id="texto-principal">
                     <h1>Bolsas Favoritas</h1>
@@ -149,18 +166,18 @@ class Main extends React.Component {
                         <div id="card" className="center escolhido" key={i}>
                             <div>                            
                                 <img src={v.university.logo_url} alt="Faculdade-Logo" width="70%"/>
-                                <div className="first">
+                                <div className="combo-name">
                                     <label>{v.university.name}</label>
                                     <h3>{v.course.name}</h3>
                                     <p>{v.university.score}</p>
                                 </div>
                                 <hr></hr>
-                                <div className="second">
+                                <div>
                                     <label>{v.course.kind} . {v.course.shift}</label>
                                     <p>Início das aulas em: {v.start_date}</p>
                                 </div>
                                 <hr></hr>
-                                <div className="third">
+                                <div className="preco">
                                 {v.enabled ?
                                     <span>
                                         <label>Mensalidade com o Quero Bolsa:</label>
@@ -174,12 +191,12 @@ class Main extends React.Component {
                                     </span>                                    
                                 }
                                 </div>
-                                <div className="fourth">
-                                    <button className="excluir">Excluir</button>
+                                <div className="acao-escolhidos">
+                                    <button className="excluir" onClick={() => this.removeEscolhidos(v)}>Excluir</button>
                                     {v.enabled ?
-                                        <button className="oferta">Ver Oferta</button>
+                                        <button className="oferta enabled">Ver Oferta</button>
                                         :
-                                        <button className="indisponivel">Indisponível</button>
+                                        <button className="indisponivel disabled">Indisponível</button>
                                     }
                                     
                                 </div>

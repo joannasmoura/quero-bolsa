@@ -12,7 +12,8 @@ class Modal extends React.Component {
             distancia: true,
             valor: 10000, 
             cidades:[],
-            cidadeSelecionada:''
+            cidadeSelecionada:'', 
+            escolhidos:[]
         };
     }
     
@@ -27,18 +28,24 @@ class Modal extends React.Component {
         const name = target.name;
         state[name] = value;
         this.setState(state);
-        this.props.getData(this.state);
+        this.props.getData(state);
     }
 
     handleInputEscolheCurso = (escolhido, ativo, key) =>{
+        let state = this.state;
         if(ativo === undefined || ativo === false ){
-            this.props.campos.escolhidos.splice(key, 0, escolhido)
+            state.escolhidos.splice(key, 0, escolhido);
             escolhido.checked = true;
         }else{
-            this.props.campos.escolhidos.splice(key);
+            state.escolhidos.splice(key);
             escolhido.checked = false;
-        }
-        
+        }   
+        this.setState(state);     
+    }
+
+    adicionarBolsas = () =>{
+        this.props.adicionaEscolhidos(this.state.escolhidos);
+        this.props.handleClose()
     }
 
     render() {             
@@ -107,28 +114,35 @@ class Modal extends React.Component {
                     </div>
                     {this.props.campos.entity.map((v, i) =>{                        
                         return(
-                            <div className="card-curso" key={i}>
-                                <div className="imagem"> <img src={v.university.logo_url} alt="Faculdade-Logo" width="70%"/> </div>                        
-                                <div className="check-card">
-                                    <input
-                                    name="escolheCurso"
-                                    type="checkbox"
-                                    className="check-custom"
-                                    checked={v.checked}
-                                    onChange={() => this.handleInputEscolheCurso(v, v.checked, i)} />
+                            <span  key={i}>
+                                <div className="card-curso">
+                                    <div className="imagem"> <img src={v.university.logo_url} alt="Faculdade-Logo" width="70%"/> </div>                        
+                                    <div className="check-card">
+                                        <input
+                                        name="escolheCurso"
+                                        type="checkbox"
+                                        className="check-custom"
+                                        checked={v.checked}
+                                        onChange={() => this.handleInputEscolheCurso(v, v.checked, i)} />
+                                    </div>
+                                    
+                                    <div className="curso">
+                                        <h3>{v.course.name}</h3>   
+                                        <p>{v.course.level}</p>
+                                    </div>
+                                    <div className="bolsa"> 
+                                        <p>Bolsa de <green-accent>{v.discount_percentage}%</green-accent></p>
+                                        <p><green-accent>R${v.price_with_discount}/mês</green-accent></p>
+                                    </div>                                      
                                 </div>
-                                
-                                <div className="curso">
-                                    <h3>{v.course.name}</h3>   
-                                    <p>{v.course.level}</p>
-                                </div>
-                                <div className="bolsa"> 
-                                    <p>Bolsa de <green-accent>{v.discount_percentage}%</green-accent></p>
-                                    <p><green-accent>R${v.price_with_discount}/mês</green-accent></p>
-                                </div>                    
-                            </div>
+                                <hr></hr>
+                            </span>
                         )
-                    })}                                                     
+                    })}
+                    <div className="button-group">
+                        <button className="cancelar">Cancelar</button>
+                        <button className={this.state.escolhidos.length === 0 ? 'disabled adicionar' : 'adicionar enabled'} onClick={() => this.adicionarBolsas()}>Adicionar bolsa(s)</button>                        
+                    </div>
                 </section>            
             </div>
         )

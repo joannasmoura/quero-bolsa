@@ -57,12 +57,7 @@ button:focus {
   outline: 0;
 }
 
-.disabled {
-  border: 1px solid rgba(0, 122, 141, 0.6);
-  color: rgba(0, 122, 141, 0.6);
-  pointer-events: none;
-}
-
+/*----Checkbox-----*/
 .check-custom {
   -webkit-appearance: none;
   background-color: #ffffff;
@@ -192,6 +187,18 @@ button:focus {
   color: #eee;
 }
 
+.disabled {
+  border-color: grey;
+  background-color: darkgrey;
+  color: gray;
+}
+
+.enabled {
+  background-color: #FDCB13;
+  color: black;
+  border-color: #DE9E1F;
+}
+
 div#main {
   margin: 20px;
   color: #1F2D30;
@@ -250,41 +257,41 @@ div.escolhido h3 {
   margin: 0;
 }
 
-div.escolhido div.first {
+div.escolhido div.combo-name {
   margin-top: 15px;
 }
 
-div.escolhido div.first p {
+div.escolhido div.combo-name p {
   font-weight: bold;
 }
 
-div.escolhido div.first label {
+div.escolhido div.combo-name label {
   font-size: 15px;
 }
 
-div.escolhido div.third p {
+div.escolhido div.preco p {
   margin-bottom: 0;
 }
 
-div.escolhido div.third p.through-line {
+div.escolhido div.preco p.through-line {
   text-decoration: line-through;
 }
 
-div.escolhido div.third h3 {
+div.escolhido div.preco h3 {
   margin-top: 0;
   font-weight: normal;
 }
 
-div.escolhido div.third h3 green-accent {
+div.escolhido div.preco h3 green-accent {
   font-size: 23px;
 }
 
-div.escolhido div.third label {
+div.escolhido div.preco label {
   text-transform: none;
   font-size: 15px;
 }
 
-div.escolhido div.fourth {
+div.escolhido div.acao-escolhidos {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "excluir oferta";
@@ -293,9 +300,6 @@ div.escolhido div.fourth {
 }
 
 div.escolhido button.oferta {
-  background-color: #FDCB13;
-  color: black;
-  border-color: #DE9E1F;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: oferta;
@@ -313,8 +317,5 @@ div.escolhido button.indisponivel {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: oferta;
-  border-color: grey;
-  background-color: darkgrey;
-  color: gray;
 }
 /*# sourceMappingURL=Main.css.map */

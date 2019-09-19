@@ -32,7 +32,7 @@ function Footer() {
                 <div className="f-600 mb-10">Ajuda</div>
             </div>
 
-            <div id="amor" className="center">
+            <div id="dedicatoria" className="center">
                 <p className="f-600">Feito com <FontAwesomeIcon icon={faHeart}/> por Quero Educação</p>
             </div>
         </footer>        

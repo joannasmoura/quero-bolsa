@@ -5,6 +5,11 @@ body {
   margin: 5px 0;
 }
 
+green-accent {
+  color: #0FA866;
+  font-weight: bold;
+}
+
 .center {
   text-align: center;
 }
@@ -185,6 +190,12 @@ button:focus {
           transform: translate(calc((var(--val) - var(--min))/(var(--max) - var(--min))*11em - 50%));
   background: #95a;
   color: #eee;
+}
+
+.disabled {
+  border-color: grey;
+  background-color: darkgrey;
+  color: gray;
 }
 
 header {
